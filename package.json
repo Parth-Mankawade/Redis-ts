@@ -1,0 +1,27 @@
+{
+  "name": "redis-ts",
+  "version": "1.0.0",
+  "description": "A Redis-compatible in-memory data store written from scratch in TypeScript: RESP protocol, expiry, lists, blocking pops, transactions, pub/sub, RDB persistence and master-replica replication.",
+  "main": "dist/index.js",
+  "bin": {
+    "redis-ts": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "node --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["redis", "database", "key-value", "typescript", "resp", "replication"],
+  "author": "Parth Mankawade",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
